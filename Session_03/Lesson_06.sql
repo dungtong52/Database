@@ -48,3 +48,6 @@ DELETE FROM `products` WHERE `productID` = 4;
 -- Query
 SELECT * FROM `products`;
 SELECT * FROM `suppliers`;
+SELECT `product`.`name`, `product`.`supplier_id`, `supplier`.`name`, `supplier`.`supplier_id`
+FROM `product`, `supplier`
+WHERE `product`.`supplier_id` = `supplier`.`supplier_id`
